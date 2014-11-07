@@ -7,15 +7,39 @@
 //
 
 #import "INNJAppDelegate.h"
+#import "INNJInfoRequest.h"
+
+@interface INNJAppDelegate () <BMKGeneralDelegate>
+@property (nonatomic,strong) BMKMapManager *manager;
+@end
 
 @implementation INNJAppDelegate
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    NSLog(@"%@",[[NSBundle mainBundle] bundleIdentifier]);
+    [self bMapInit];
     return YES;
 }
-							
+-(void) bMapInit
+{
+    _manager = [[BMKMapManager alloc] init];
+    BOOL ret = [_manager start:@"vMAgWGbAEhvpHGscg5voMqXt" generalDelegate:self];
+    if(!ret)
+    {
+        NSLog(@"Error Map AK");
+    }
+}
+
+-(void) onGetNetworkState:(int)iError
+{
+    NSLog(@"N:%d",iError);
+}
+
+-(void) onGetPermissionState:(int)iError
+{
+    NSLog(@"P:%d",iError);
+}
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
