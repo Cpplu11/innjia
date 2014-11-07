@@ -19,8 +19,10 @@
     // Override point for customization after application launch.
     NSLog(@"%@",[[NSBundle mainBundle] bundleIdentifier]);
     [self bMapInit];
+    [self UIInit];
     return YES;
 }
+
 -(void) bMapInit
 {
     _manager = [[BMKMapManager alloc] init];
@@ -29,6 +31,12 @@
     {
         NSLog(@"Error Map AK");
     }
+}
+-(void) UIInit
+{
+    [[UINavigationBar appearance] setBackgroundColor:DEFAULTCOLOR];
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageWithColor:DEFAULTCOLOR] forBarMetrics:UIBarMetricsDefault];
+    
 }
 
 -(void) onGetNetworkState:(int)iError

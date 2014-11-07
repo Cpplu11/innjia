@@ -57,6 +57,7 @@
 		7732FE591A0CE60A0024BF01 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7732FE581A0CE60A0024BF01 /* SystemConfiguration.framework */; };
 		7732FE5B1A0CE6160024BF01 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7732FE5A1A0CE6160024BF01 /* Security.framework */; };
 		7732FE5D1A0CE6490024BF01 /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7732FE5C1A0CE6490024BF01 /* mapapi.bundle */; };
+		7732FE611A0CFF450024BF01 /* INNJConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7732FE601A0CFF450024BF01 /* INNJConstants.m */; };
 		94818F799B3D4AB59781091A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9212BA52E5EF47258EFFEE06 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -195,7 +196,8 @@
 		7732FE581A0CE60A0024BF01 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		7732FE5A1A0CE6160024BF01 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		7732FE5C1A0CE6490024BF01 /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = mapapi.bundle; sourceTree = "<group>"; };
-		7732FE5E1A0CF1FE0024BF01 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		7732FE5F1A0CFF450024BF01 /* INNJConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INNJConstants.h; sourceTree = "<group>"; };
+		7732FE601A0CFF450024BF01 /* INNJConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INNJConstants.m; sourceTree = "<group>"; };
 		9212BA52E5EF47258EFFEE06 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -348,7 +350,8 @@
 				7732FE111A0CDF870024BF01 /* Category */,
 				7732FDFB1A0A5A3D0024BF01 /* Web */,
 				7732FDEC1A0A585E0024BF01 /* View */,
-				7732FE5E1A0CF1FE0024BF01 /* Constants.h */,
+				7732FE5F1A0CFF450024BF01 /* INNJConstants.h */,
+				7732FE601A0CFF450024BF01 /* INNJConstants.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -658,6 +661,7 @@
 				7732FD971A09DD1B0024BF01 /* main.m in Sources */,
 				7732FDEB1A0A51BC0024BF01 /* INNJUserViewController.m in Sources */,
 				7732FDFF1A0CB1640024BF01 /* INNJEntrustViewController.m in Sources */,
+				7732FE611A0CFF450024BF01 /* INNJConstants.m in Sources */,
 				7732FD9B1A09DD1B0024BF01 /* INNJAppDelegate.m in Sources */,
 				7732FDE51A0A51360024BF01 /* INNJRentHouseViewController.m in Sources */,
 				7732FE0B1A0CC3E20024BF01 /* INNJMineTableViewCell.m in Sources */,
