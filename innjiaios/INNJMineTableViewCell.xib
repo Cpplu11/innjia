@@ -24,6 +24,10 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="forward-btn.png" translatesAutoresizingMaskIntoConstraints="NO" id="Oh9-dh-fSg">
+                        <rect key="frame" x="292" y="15" width="8" height="13"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
                 </subviews>
             </tableViewCellContentView>
             <connections>
@@ -32,4 +36,7 @@
             </connections>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="forward-btn.png" width="8" height="13"/>
+    </resources>
 </document>

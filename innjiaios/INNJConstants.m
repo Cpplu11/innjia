@@ -28,4 +28,20 @@
     
 }
 
++(UIImage*) imageCircle:(CGRect) rect withLabel:(NSString*) label
+{
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetStrokeColorWithColor(context, [UIColor colorWithWhite:0.1 alpha:0.8].CGColor);
+    CGContextSetFillColorWithColor(context, POINTCOLOR.CGColor);
+    CGContextFillEllipseInRect(context, rect);
+    NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];
+    paragraph.alignment = NSTextAlignmentCenter;
+    
+    [label drawInRect:CGRectMake(CGRectGetWidth(rect)*0.2, CGRectGetHeight(rect)*0.2, CGRectGetWidth(rect)*0.6, CGRectGetHeight(rect)*0.6) withAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor],NSParagraphStyleAttributeName:paragraph,NSFontAttributeName:[UIFont systemFontOfSize:16]}];
+    UIImage *colorimage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return colorimage;
+}
+
 @end

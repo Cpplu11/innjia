@@ -7,8 +7,8 @@
 //
 
 #import "INNJAppDelegate.h"
-#import "INNJInfoRequest.h"
-
+#import "DataManage.h"
+#import "HouseEntrust.h"
 @interface INNJAppDelegate () <BMKGeneralDelegate>
 @property (nonatomic,strong) BMKMapManager *manager;
 @end
@@ -17,7 +17,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    NSLog(@"%@",[[NSBundle mainBundle] bundleIdentifier]);
+
     [self bMapInit];
     [self UIInit];
     return YES;
@@ -34,8 +34,11 @@
 }
 -(void) UIInit
 {
-    [[UINavigationBar appearance] setBackgroundColor:DEFAULTCOLOR];
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageWithColor:DEFAULTCOLOR] forBarMetrics:UIBarMetricsDefault];
+
+    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlackOpaque];
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageWithColor:DEFAULTCOLOR] forBarPosition:UIBarPositionTopAttached barMetrics:UIBarMetricsDefault];
+    
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     
 }
 

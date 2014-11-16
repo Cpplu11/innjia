@@ -1,29 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="cV9-XG-lkS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="G5f-M0-kaJ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
-        <scene sceneID="c5D-l6-ZaM">
+        <scene sceneID="i5X-Ct-uEu">
             <objects>
-                <navigationController definesPresentationContext="YES" id="cV9-XG-lkS" sceneMemberID="viewController">
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="dnp-dI-e1c">
-                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
+                <navigationController definesPresentationContext="YES" id="Fig-eg-dGu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="rent_tag_off.png" id="rZz-mi-YPT">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jv9-dr-YOP">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="x8I-zo-bRI">
-                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
                     <connections>
-                        <segue destination="G5f-M0-kaJ" kind="relationship" relationship="rootViewController" id="fcl-mf-AsX"/>
+                        <segue destination="GY8-0k-9co" kind="relationship" relationship="rootViewController" id="xqo-gi-I9g"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Cbw-58-vpe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ztz-7f-sGk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-872" y="115"/>
+            <point key="canvasLocation" x="-447" y="-778"/>
         </scene>
         <!--Rent House View Controller - 租房-->
         <scene sceneID="qQy-dI-FFr">
@@ -34,39 +31,143 @@
                         <viewControllerLayoutGuide type="bottom" id="Xf8-EU-gDj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="NtY-Xp-QU5">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="rent_tag_off.png" id="5LA-p5-0wk">
+                    <tabBarItem key="tabBarItem" title="" id="5LA-p5-0wk">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
+                    <navigationItem key="navigationItem" id="Ddt-K2-e6g"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kIr-ef-AbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="92" y="-308"/>
+            <point key="canvasLocation" x="-58" y="-778"/>
+        </scene>
+        <!--Contract View Controller-->
+        <scene sceneID="GBw-Tw-WPa">
+            <objects>
+                <viewController storyboardIdentifier="contractcontroller" automaticallyAdjustsScrollViewInsets="NO" id="Tjv-Ow-t9a" customClass="INNJContractViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tgh-pS-ADi"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Vm-28-XHQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xx6-gT-Eso">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dfM-8t-M0l">
+                                <rect key="frame" x="10" y="81" width="300" height="370"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">一、 乙方提供上述房产供甲方（包括甲方的代理人、亲属及朋友）选择，同时提供相关房地产咨询等       中介服务。通过乙方提供中介咨询服务后，甲方（包括甲方的代理人、亲属及朋友）与上述房产的产权人或产权人的代理人签订合同即视为为乙方完成中介、咨询服务的责任。  二、 甲方声明，在此之前，甲方没有通过任何个人或中介机构看过乙方所带看的上述房屋，并经由乙  方安排甲方实际查看上述房屋。  三、 甲方在看房时和看房后，不能和房主交换联络方式或直接和房主联系，若有任何要求或需求，应   先和乙方联络，由乙方出面与房主联系、商谈。若因甲方和房主直接联络而产生的纠纷和责任，由甲方承担。 四、 甲方看好乙方提供的售房房源并成交，应支付给乙方房产实际成交价格的1%作为中介佣金费用，租房的佣金相当于半个月的房租的金额。  五、 甲方（包括甲方的代理人、亲属及朋友）自看该房之日起六个月内，无论以任何理由，不通过乙  方，自己或通过第三方（无论是中介或个人）而与乙方提供的该房屋业主达成交易，购买或租赁成交该房屋，一经查实则是为本次交易成功，甲方及构成违约并承担法律责任。甲方应该按照该 房屋在本协议中的登记价格，双倍（2%）[买卖]、或一个月的房租[租赁]支付中介佣金给乙方。本协议房屋登记价格与交易价格不一致时，应以本协议登记价格为支付佣金的依据。甲方并应承担相应的诉讼费、公证费、律师费等相关费用。 六、 乙方承诺：   1、 乙方向甲方提供免费看房服务并保证向甲方提供的房屋信息真实有效。  2、 协助甲方与房屋产权人或代理人签订出售或出租合同，办理房屋产权转移手续。   七、 本看房单在友好协商及自愿的情况下签署。因履行本协议而发生的一切争议，应提交青岛仲裁委      员会仲裁或当地人民法院裁决。</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qe-Nl-VH0">
+                                <rect key="frame" x="20" y="468" width="280" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="同意协议立即预约看房">
+                                    <color key="titleColor" white="0.9415488139" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.9415488139" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitAction:" destination="Tjv-Ow-t9a" eventType="touchUpInside" id="ljJ-Rz-ltU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="submitBtn" destination="3qe-Nl-VH0" id="iyn-tP-BBr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dey-N3-tPP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="370" y="-595"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="sim-ou-zDO">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="G5f-M0-kaJ" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="BZh-t6-6rB"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="XwW-ud-xlE">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="GY8-0k-9co" kind="relationship" relationship="viewControllers" id="L0x-hJ-Y6y"/>
-                        <segue destination="S4Z-Z6-d7E" kind="relationship" relationship="viewControllers" id="0rr-G4-KyP"/>
-                        <segue destination="8WM-g1-TmO" kind="relationship" relationship="viewControllers" id="XQf-IL-PwZ"/>
-                        <segue destination="gEb-iY-i83" kind="relationship" relationship="viewControllers" id="e0f-h2-GbJ"/>
+                        <segue destination="Fig-eg-dGu" kind="relationship" relationship="viewControllers" id="Akf-XB-XbE"/>
+                        <segue destination="k8B-nZ-Br0" kind="relationship" relationship="viewControllers" id="exR-3M-kXg"/>
+                        <segue destination="5Z5-w0-MQk" kind="relationship" relationship="viewControllers" id="8Vm-NJ-lq1"/>
+                        <segue destination="OAn-7Q-CAk" kind="relationship" relationship="viewControllers" id="bJ9-QV-obf"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n8q-LD-fS7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-453" y="121"/>
+            <point key="canvasLocation" x="-1261" y="255"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UBa-xf-clK">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="k8B-nZ-Br0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="date_tag_on.png" id="gGz-t4-7a9">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fYq-HI-pFZ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="S4Z-Z6-d7E" kind="relationship" relationship="rootViewController" id="ZUg-5D-YKM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vgB-34-Nfq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-447" y="-105"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dbM-db-k0j">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="5Z5-w0-MQk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="entrust_tag_off.png" id="Ue0-kv-K3B">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sam-gM-4Vj">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8WM-g1-TmO" kind="relationship" relationship="rootViewController" id="Dk1-vl-pIt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pyE-Sg-IHl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-447" y="569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EVY-GK-FJQ">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="OAn-7Q-CAk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="mine_tag_off.png" id="jUD-Hq-bE5">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9jY-iw-Qrr">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gEb-iY-i83" kind="relationship" relationship="rootViewController" id="FXt-MV-in2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8E9-bT-Eqd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-447" y="1255"/>
         </scene>
         <!--Entrust View Controller - 委托-->
         <scene sceneID="bTB-rt-h2U">
@@ -77,38 +178,107 @@
                         <viewControllerLayoutGuide type="bottom" id="FDc-PY-TTR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kDz-V6-ml7">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="entrust_tag_off.png" id="VPx-6r-ofo">
+                    <tabBarItem key="tabBarItem" title="" id="VPx-6r-ofo">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
+                    <navigationItem key="navigationItem" id="N94-Ar-p9u"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pyS-Ph-D0t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="92" y="526"/>
+            <point key="canvasLocation" x="-52" y="569"/>
         </scene>
-        <!--Predict View Controller - 约看-->
+        <!--Login View Controller-->
+        <scene sceneID="3Rw-35-XC6">
+            <objects>
+                <viewController id="Hi5-Ah-Uiv" customClass="INNJLoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y2G-1n-yUZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ql1-6I-rfw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qtu-b1-dfq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="手机号码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ncb-sH-Q1b">
+                                <rect key="frame" x="20" y="112" width="280" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="验证码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AQn-gV-sqi">
+                                <rect key="frame" x="20" y="169" width="161" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="done"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2s-ec-S5g">
+                                <rect key="frame" x="194" y="169" width="106" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="获取验证码">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="codeAction:" destination="Hi5-Ah-Uiv" eventType="touchUpInside" id="0re-cP-xmx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1m-yJ-aKW">
+                                <rect key="frame" x="20" y="225" width="280" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="同意并登陆">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginAction:" destination="Hi5-Ah-Uiv" eventType="touchUpInside" id="kKn-Ez-zh3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="您的手机号码即用户名，我们会严格保密哒！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1NB-6S-DnA">
+                                <rect key="frame" x="20" y="85" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pGT-EJ-Dw4"/>
+                    <connections>
+                        <outlet property="codebtn" destination="e2s-ec-S5g" id="m1w-mk-K6u"/>
+                        <outlet property="codetext" destination="AQn-gV-sqi" id="Ca0-h7-vpo"/>
+                        <outlet property="loginbtn" destination="T1m-yJ-aKW" id="m96-3m-8Qy"/>
+                        <outlet property="telephonetext" destination="Ncb-sH-Q1b" id="hjl-1d-xFI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sc5-J2-ffl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="434" y="751"/>
+        </scene>
+        <!--Date View Controller - 约看-->
         <scene sceneID="MeF-Yn-aNV">
             <objects>
-                <viewController storyboardIdentifier="id_predict" title="约看" id="S4Z-Z6-d7E" customClass="INNJPredictViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="id_predict" title="约看" id="S4Z-Z6-d7E" customClass="INNJDateViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wjp-g3-cgQ"/>
                         <viewControllerLayoutGuide type="bottom" id="oBv-Jl-d5m"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ADk-js-138">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="date_tag_on.png" id="Lk1-ru-FW2">
+                    <tabBarItem key="tabBarItem" title="" id="Lk1-ru-FW2">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
+                    <navigationItem key="navigationItem" id="rbz-ia-svE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="128-Kd-pbD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="529" y="-308"/>
+            <point key="canvasLocation" x="-58" y="-105"/>
         </scene>
         <!--User View Controller - 我的-->
         <scene sceneID="W9R-Ca-fN9">
@@ -119,28 +289,21 @@
                         <viewControllerLayoutGuide type="bottom" id="VG1-U0-EK4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="NWL-rd-vnH">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="S9N-qh-xOR">
-                                <rect key="frame" x="0.0" y="64" width="320" height="390"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <inset key="separatorInset" minX="60" minY="0.0" maxX="0.0" maxY="0.0"/>
-                            </tableView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="mine_tag_off.png" id="iUk-SG-1XT">
+                    <tabBarItem key="tabBarItem" title="" id="iUk-SG-1XT">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
+                    <navigationItem key="navigationItem" id="ejg-tc-3bm"/>
                     <connections>
-                        <outlet property="tableview" destination="S9N-qh-xOR" id="8gR-iF-4Kn"/>
+                        <segue destination="Hi5-Ah-Uiv" kind="push" identifier="loginsegue" id="ZT1-73-dWi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="obP-aA-edT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="529" y="526"/>
+            <point key="canvasLocation" x="-58" y="1255"/>
         </scene>
     </scenes>
     <resources>

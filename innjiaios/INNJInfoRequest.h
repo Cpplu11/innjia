@@ -7,8 +7,39 @@
 //
 
 #import <Foundation/Foundation.h>
-#define APIROOT @"http://api.innjia.com/index.php/Api/"
+#define APIROOT @"http://api.udao.sh.cn/index.php/Api/"
 #define API(ROOT,FUNC)   [NSString stringWithFormat:@"%@%@",ROOT,FUNC];
+
+//LOGIN
+#define APIKEY @"Innjia2014"
+#define TELEPHONEKEY @"tel"
+#define CODEKEY @"code"
+#define VERIFYKEY @"verify"
+//GetHouseByAid
+#define HOUSEID @"id"
+//GetHouseByDt
+#define HOUSESTARTDT @"startdt"
+#define HOUSEENDDT @"enddt"
+//GetHouseByVillage,GetVillage
+#define HOUSEVILLAGE @"village"
+
+//Predicate
+#define USERNAME @"realname"
+#define USERSEX @"sex"
+#define USERDATE @"date"
+
+//Entrust
+#define USERCITY @"city"
+#define RENTCOST @"rent"
+#define ROOMS @"shi"
+#define CHECKTIME @"checktime"
+#define MEMO @"memo"
+
+
+#define ID @"id"
+
+#define STATUSKEY @"status"
+
 
 typedef NS_ENUM(NSInteger, RequestType)
 {
@@ -17,7 +48,7 @@ typedef NS_ENUM(NSInteger, RequestType)
     GetHousebyAid,
     GetHousebyDt,
     GetHousebyVillage,
-    GetVollage,
+    GetVillage,
     AddPredict,
     GetPredictbyId,
     GetPredictbyTel,
@@ -27,9 +58,51 @@ typedef NS_ENUM(NSInteger, RequestType)
     GetEntrustbyTel
 };
 
+typedef NS_ENUM(NSInteger, InfoStatus)
+{
+    CodeErrorStatus=99,
+   
+    //StepMobile
+    StepSuccessStatus=100,
+    //CheckMobile
+    VerifySuccessStatus=101,
+    VerifyErrorStatus=102,
+    //GetHouseByAid
+    GetHouseByAidSuccessStatus = 110,
+    GetHouseByAidNotExistStatus = 111,
+    //GetHouseByDt,GetHouseByVillage
+    GetHouseByDtSuccessStatus = 103,
+    
+    //GetVillage
+    GetVillageSuccessStatus = 120,
+    GetVillageNotExistStatus = 121,
+    //AddPredict
+    AddPredictSuccessStatus = 130,
+    AddPredictErrorStatus = 131,
+    
+    //GetPredictById
+    GetPredictByIdSuccessStatus =140,
+    GetPredictByIdNotExistSuccess = 141,
+    
+    //GetPredictByTel
+    GetPredictByTelSuccessStatus = 140,
+    
+    //AddEntrust
+    AddEntrussSuccessStatus = 160,
+    AddEntrussErrorStatus = 161,
+    
+    //GetEntrustById
+    GetEntrustByIdSuccessStatus = 170,
+    GetEntrustByIdNotExistStatus = 171,
+    
+    //GetEntrustByTel
+    GetEntrustByTelSuccessStatus = 170,
+    GetEntrustByTelNotExistStatus = 171
+    
+};
 @protocol INNJInfoRequestDelegate <NSObject>
--(void) infoDone:(NSDictionary*)data withStatus:(NSInteger) status;
--(void) errorDone:(NSInteger) status;
+-(void) infoDone:(NSDictionary*)data withType:(RequestType) type;
+-(void) errorDone:(NSError*) error withType:(RequestType)type;
 @end
 
 @interface INNJInfoRequest : NSObject

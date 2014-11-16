@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "INNJViewController.h"
 @interface INNJUserViewController : INNJViewController
-@property (strong, nonatomic) IBOutlet UITableView *tableview;
+
 
 @end

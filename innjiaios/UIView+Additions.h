@@ -25,7 +25,7 @@
 
 
 +(id)getView;
-
++(id)getView:(NSInteger) index;
 - (UIViewController *)superviewcontroller;
 
 

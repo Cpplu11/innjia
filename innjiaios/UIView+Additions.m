@@ -123,6 +123,10 @@
 {
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:self options:nil] lastObject]; 
 }
++(id)getView:(NSInteger) index
+{
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:self options:nil] objectAtIndex:index];
+}
 
 - (UIViewController *)superviewcontroller
 {
