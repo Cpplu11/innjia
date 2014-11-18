@@ -10,11 +10,13 @@
 #import "BMKCircleView.h"
 #import "BMKAnnotationView.h"
 #import "BMKPointAnnotation.h"
+#import "BMKAnnotation.h"
 #define REUSEID @"Point"
 
-@interface INNJPoint :BMKPointAnnotation
+@interface INNJPoint :NSObject <BMKAnnotation>
 @property (nonatomic,assign) NSInteger tag;
 @property (nonatomic,assign) NSString *key;
+@property (nonatomic) CLLocationCoordinate2D coordinate;
 - (void)setCoordinate:(CLLocationCoordinate2D)newCoordinate;
 @end
 

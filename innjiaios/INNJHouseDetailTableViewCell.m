@@ -8,6 +8,7 @@
 
 #import "INNJHouseDetailTableViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "BMKPointAnnotation.h"
 @implementation INNJHouseDetailTableViewCell
 -(void) bindData:(NSDictionary *)data
 {}
@@ -19,6 +20,7 @@
 {
     // Initialization code
     _introtext.adjustsFontSizeToFitWidth = YES;
+    
 }
 -(void) bindData:(NSDictionary*)data
 {
@@ -73,12 +75,28 @@
 
 -(void)awakeFromNib
 {
-    
+    _map = [[BMKMapView alloc] initWithFrame:_maparea.bounds];
+    _map.scrollEnabled = NO;
+    _map.zoomEnabled = NO;
+    [_maparea addSubview:_map];
+    _map.zoomLevel = 16;
 }
 
 -(void)bindData:(NSDictionary *)data
 {
     _addresstext.text = data[@"address"];
+    if(data[@"dt"]!=nil)
+    {
+        NSArray *dt = [data[@"dt"] componentsSeparatedByString:@","];
+        CLLocationCoordinate2D coordinate2d;
+        coordinate2d.latitude = [dt[0] doubleValue];
+        coordinate2d.longitude = [dt[1] doubleValue];
+        BMKPointAnnotation *point = [[BMKPointAnnotation alloc] init];
+        point.coordinate = coordinate2d;
+        [_map setCenterCoordinate:coordinate2d];
+        [_map addAnnotation:point];
+    }
+    
 }
 
 @end

@@ -136,6 +136,7 @@
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             [cell bindData:@{@"dt":_data[@"dt"],@"address":_data[@"address"]}];
             
+            
         }
             break;
         default:

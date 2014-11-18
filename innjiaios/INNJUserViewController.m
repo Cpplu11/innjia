@@ -26,6 +26,7 @@
    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(login:) name:LOGINNOTIFICATION object:nil];
     self.navigationItem.title = @"我的";
+  
 }
 
 -(void) login:(NSNotification*) notification
@@ -52,10 +53,9 @@
         _images = @[@"user-service-phone",@"user-check-update",@"user-feedback",@"user-rate",@"user-about"];
        
     }
-    _tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, self.view.width, MIN(self.view.height-64-32,100+44*[_titles count]))];
+    _tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, self.topoffset, self.view.width, self.view.height)];
     _tableview.delegate = self;
     _tableview.dataSource = self;
-    _tableview.separatorInset = UIEdgeInsetsMake(0, 70, 0, 0);
     _tableview.bounces = NO;
     [self.view addSubview:_tableview];
 }

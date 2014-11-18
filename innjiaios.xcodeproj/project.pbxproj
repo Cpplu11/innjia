@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		771B82B71A18C59800C1F823 /* INNJTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771B82B61A18C59800C1F823 /* INNJTabController.m */; };
 		7732FD8B1A09DD1B0024BF01 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7732FD8A1A09DD1B0024BF01 /* Foundation.framework */; };
 		7732FD8D1A09DD1B0024BF01 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7732FD8C1A09DD1B0024BF01 /* CoreGraphics.framework */; };
 		7732FD8F1A09DD1B0024BF01 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7732FD8E1A09DD1B0024BF01 /* UIKit.framework */; };
@@ -104,6 +105,8 @@
 
 /* Begin PBXFileReference section */
 		1F65C11AE544454A9D37A135 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		771B82B51A18C59800C1F823 /* INNJTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INNJTabController.h; sourceTree = "<group>"; };
+		771B82B61A18C59800C1F823 /* INNJTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INNJTabController.m; sourceTree = "<group>"; };
 		7732FD871A09DD1B0024BF01 /* innjiaios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = innjiaios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7732FD8A1A09DD1B0024BF01 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7732FD8C1A09DD1B0024BF01 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -420,6 +423,8 @@
 				77D328571A15F0F10003ADF2 /* INNJAddDateViewController.m */,
 				77D328591A15F0FF0003ADF2 /* INNJAddEntrustViewController.h */,
 				77D3285A1A15F0FF0003ADF2 /* INNJAddEntrustViewController.m */,
+				771B82B51A18C59800C1F823 /* INNJTabController.h */,
+				771B82B61A18C59800C1F823 /* INNJTabController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -814,6 +819,7 @@
 				77CAB6261A11F08900DA8853 /* INNJEntrustTableViewCell.m in Sources */,
 				77D328481A14C2D90003ADF2 /* INNJHouseDetailTableViewCell.m in Sources */,
 				7732FDFF1A0CB1640024BF01 /* INNJEntrustViewController.m in Sources */,
+				771B82B71A18C59800C1F823 /* INNJTabController.m in Sources */,
 				77342EE71A16F2E400E05DBE /* INNJPoint.m in Sources */,
 				7732FE611A0CFF450024BF01 /* INNJConstants.m in Sources */,
 				77CAB61D1A10F5DB00DA8853 /* INNJDateView.m in Sources */,
@@ -959,6 +965,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "innjiaios/innjiaios-Prefix.pch";
 				INFOPLIST_FILE = "innjiaios/innjiaios-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/innjiaios",
@@ -980,6 +987,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "innjiaios/innjiaios-Prefix.pch";
 				INFOPLIST_FILE = "innjiaios/innjiaios-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/innjiaios",

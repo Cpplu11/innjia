@@ -23,11 +23,11 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor whiteColor];
     _hud = [[MBProgressHUD alloc] initWithView:self.view];
-    [self.view addSubview:_hud];
+    
     [_hud hide:NO];
     
     _hudtext = [[MBProgressHUD alloc] initWithView:self.view];
-    [self.view addSubview:_hudtext];
+    
     [_hudtext hide:NO];
     
     self.editView = [self getDoneView:DONEBTNTAG];
@@ -53,19 +53,22 @@
 
 -(void) showLoading
 {
-    _hud.mode =MBProgressHUDModeIndeterminate;
-
-    [_hud show:YES];
+        [self.view addSubview:_hud];
+        _hud.mode =MBProgressHUDModeIndeterminate;
+        [_hud show:YES];
+    
 }
 
 -(void) dismissLoading
 {
+   
     [_hud hide:YES];
+    [_hud removeFromSuperview];
 }
 
 -(void) showText:(NSString*) text
 {
-  
+    [self.view addSubview:_hudtext];
     self.hudtext.mode = MBProgressHUDModeText;
     self.hudtext.labelText = text;
     [_hudtext show:YES];
@@ -73,6 +76,7 @@
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, 1* NSEC_PER_SEC);
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         [_whudtext hide:YES];
+        [_hudtext removeFromSuperview];
     });
     
    
@@ -176,12 +180,13 @@
 
 -(CGFloat) topoffset
 {
+   
     CGFloat offset = CGRectGetHeight([[UIApplication sharedApplication] statusBarFrame]);
     if(self.navigationController && !self.navigationController.navigationBarHidden)
     {
         offset += self.navigationController.navigationBar.height;
     }
-    return offset;
+    return 0;
 }
 
 -(CGFloat) bottomoffset

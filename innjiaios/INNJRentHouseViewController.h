@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "INNJViewController.h"
-@interface INNJRentHouseViewController : INNJViewController
+#import "BMapKit.h"
+#import "INNJInfoRequest.h"
+@interface INNJRentHouseViewController : INNJViewController <BMKMapViewDelegate,INNJInfoRequestDelegate,UISearchBarDelegate>
+
 
 @end

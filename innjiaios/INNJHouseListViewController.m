@@ -10,6 +10,8 @@
 #import "INNJHouseTableViewCell.h"
 #import "INNJHouseDetailViewController.h"
 #import "INNJInfoRequest.h"
+#import "BMKMapView.h"
+#import "BMKPointAnnotation.h"
 @interface INNJHouseListViewController ()<UITableViewDataSource,UITableViewDelegate,INNJInfoRequestDelegate>
 
 @end
@@ -39,7 +41,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    _tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height-self.topoffset-self.bottomoffset)];
+    _tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, self.topoffset, self.view.width, self.view.height-self.topoffset-self.bottomoffset)];
     _tableview.dataSource = self;
     _tableview.delegate  = self;
     _tableview.bounces = NO;
@@ -49,12 +51,13 @@
     
     if(VillageHouseList == _controllertype && _villagename !=nil)
     {
+        [self showLoading];
         [[INNJInfoRequest request] makeRequest:GetHousebyVillage andParams:@{HOUSEVILLAGE:_villagename} andDelegate:self];
         if(self.navigationItem!=nil)
         {
             self.navigationItem.title=@"同小区房源";
         }
-        _tableview.frame = CGRectMake(0, self.topoffset, self.view.width, self.view.height-self.topoffset-self.bottomoffset);
+        _tableview.frame = CGRectMake(0, 0, self.view.width, self.view.height);
     }
     
 }
@@ -76,7 +79,7 @@
         return 0;
     }else if(_controllertype == VillageHouseList)
     {
-        return 0;
+        return 100;
     }
     
     return 0;
@@ -89,6 +92,30 @@
         UIView* view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 8)];
         view.backgroundColor = DEFAULTCOLOR;
         return view;
+    }else if(_controllertype == VillageHouseList)
+    {
+        BMKMapView* map = [[BMKMapView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 100)];
+        map.zoomEnabled = NO;
+        map.scrollEnabled = NO;
+        map.zoomLevel = 16;
+        
+        if(_data!=nil && [_data count]>0)
+        {
+            NSString* dtstr = [[_data firstObject] objectForKey:@"dt"];
+            if(dtstr!=nil)
+            {
+                NSArray * dt = [dtstr componentsSeparatedByString:@","];
+                CLLocationCoordinate2D coordinate2d;
+                coordinate2d.latitude = [dt[0] doubleValue];
+                coordinate2d.longitude = [dt[1] doubleValue];
+                BMKPointAnnotation *point = [[BMKPointAnnotation alloc] init];
+                point.coordinate = coordinate2d;
+                [map setCenterCoordinate:coordinate2d];
+                [map addAnnotation:point];
+            }
+        }
+        
+        return map;
     }
     
     return nil;
@@ -139,6 +166,7 @@
 
 -(void) infoDone:(NSDictionary *)data withType:(RequestType)type
 {
+    [self dismissLoading];
     if(GetHousebyVillage == type)
     {
         NSLog(@"%@",data);

@@ -72,11 +72,11 @@
     NSLog(@"%@",data);
     
     //测试
-    [[INNJUser user] login:_telephonetext.text];
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:LOGINNOTIFICATION object:nil];
-    [self.navigationController popViewControllerAnimated:YES];
-    return;
+//    [[INNJUser user] login:_telephonetext.text];
+//    
+//    [[NSNotificationCenter defaultCenter] postNotificationName:LOGINNOTIFICATION object:nil];
+//    [self.navigationController popViewControllerAnimated:YES];
+//    return;
     
     if(CheckMobile == type)
     {

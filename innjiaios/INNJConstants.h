@@ -23,6 +23,13 @@
 
 
 #define HTTPWRAPPER(url) [NSString stringWithFormat:@"http://%@",url]
+
+
+#define IOSVERSION [[UIDevice currentDevice].systemVersion integerValue]
+#define IOS8 8
+#define IOS7 7
+#define IOS6 6
+
 @protocol INNJLoginProtocol <NSObject>
 -(void) login:(NSNotification*) notification;
 -(void) logout:(NSNotification*) notification;

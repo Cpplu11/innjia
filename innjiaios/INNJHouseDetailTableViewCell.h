@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "BMKMapView.h"
 @interface INNJHouseDetailTableViewCell : UITableViewCell
 -(void) bindData:(NSDictionary*)data;
 @end
@@ -34,5 +34,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *addresstext;
 @property (strong, nonatomic) IBOutlet UILabel *distancetext;
 @property (strong, nonatomic) IBOutlet UIView *maparea;
+@property (strong,nonatomic) BMKMapView* map;
 
 @end
