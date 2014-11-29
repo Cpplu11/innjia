@@ -59,7 +59,18 @@
 		7732FE5D1A0CE6490024BF01 /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7732FE5C1A0CE6490024BF01 /* mapapi.bundle */; };
 		7732FE611A0CFF450024BF01 /* INNJConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7732FE601A0CFF450024BF01 /* INNJConstants.m */; };
 		77342EE71A16F2E400E05DBE /* INNJPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 77342EE61A16F2E400E05DBE /* INNJPoint.m */; };
-		77342EE91A17157800E05DBE /* point@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77342EE81A17157800E05DBE /* point@2x.png */; };
+		779E55491A1DE60A00F6CB79 /* INNJInfoRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7732FDE01A09EBE80024BF01 /* INNJInfoRequest.m */; };
+		779E554F1A21FBE000F6CB79 /* INNJSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 779E554E1A21FBE000F6CB79 /* INNJSearchViewController.m */; };
+		779E55641A25DC3000F6CB79 /* DataManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 779E55631A25DC2F00F6CB79 /* DataManage.m */; };
+		779E55701A25EC5100F6CB79 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 779E556E1A25EC5100F6CB79 /* Model.xcdatamodeld */; };
+		779E55761A25EF9000F6CB79 /* HouseDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 779E55751A25EF9000F6CB79 /* HouseDate.m */; };
+		779E557C1A26D78300F6CB79 /* INNJVillageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 779E557B1A26D78300F6CB79 /* INNJVillageViewController.m */; };
+		779E557F1A285F6300F6CB79 /* favourites-off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 779E557D1A285F6300F6CB79 /* favourites-off@2x.png */; };
+		779E55801A285F6300F6CB79 /* favourites-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 779E557E1A285F6300F6CB79 /* favourites-on@2x.png */; };
+		779E55871A286C3C00F6CB79 /* INNJHouseDetailTableViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 779E55851A286C3C00F6CB79 /* INNJHouseDetailTableViewCell2.m */; };
+		779E55881A286C3C00F6CB79 /* INNJHouseDetailTableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 779E55861A286C3C00F6CB79 /* INNJHouseDetailTableViewCell2.xib */; };
+		779E558B1A28810200F6CB79 /* Favourites.m in Sources */ = {isa = PBXBuildFile; fileRef = 779E558A1A28810200F6CB79 /* Favourites.m */; };
+		779E55911A2894DD00F6CB79 /* HouseEntrust.m in Sources */ = {isa = PBXBuildFile; fileRef = 779E55901A2894DD00F6CB79 /* HouseEntrust.m */; };
 		77CAB6131A10D35800DA8853 /* INNJEntrustView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77CAB6121A10D35800DA8853 /* INNJEntrustView.xib */; };
 		77CAB6161A10D5E300DA8853 /* INNJEntrustView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77CAB6151A10D5E300DA8853 /* INNJEntrustView.m */; };
 		77CAB6191A10DD6200DA8853 /* input-bg-off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77CAB6171A10DD6200DA8853 /* input-bg-off@2x.png */; };
@@ -70,17 +81,11 @@
 		77CAB6271A11F08900DA8853 /* INNJEntrustTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77CAB6251A11F08900DA8853 /* INNJEntrustTableViewCell.xib */; };
 		77CAB62B1A11F17C00DA8853 /* INNJHouseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 77CAB6291A11F17C00DA8853 /* INNJHouseTableViewCell.m */; };
 		77CAB62C1A11F17C00DA8853 /* INNJHouseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77CAB62A1A11F17C00DA8853 /* INNJHouseTableViewCell.xib */; };
-		77CAB6301A11F39000DA8853 /* INNJVillageDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 77CAB62E1A11F39000DA8853 /* INNJVillageDetailTableViewCell.m */; };
-		77CAB6311A11F39000DA8853 /* INNJVillageDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77CAB62F1A11F39000DA8853 /* INNJVillageDetailTableViewCell.xib */; };
 		77CAB6341A12129600DA8853 /* INNJUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 77CAB6331A12129600DA8853 /* INNJUser.m */; };
 		77CAB6371A1214BE00DA8853 /* INNJDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77CAB6361A1214BE00DA8853 /* INNJDateViewController.m */; };
 		77CAB63B1A1215DB00DA8853 /* INNJLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77CAB63A1A1215DB00DA8853 /* INNJLoginViewController.m */; };
 		77CAB63D1A12196800DA8853 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77CAB63C1A12196800DA8853 /* logo@2x.png */; };
-		77CAB6401A138FE500DA8853 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77CAB63E1A138FE500DA8853 /* Model.xcdatamodeld */; };
-		77CAB6431A13917E00DA8853 /* HouseDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77CAB6421A13917E00DA8853 /* HouseDate.m */; };
-		77CAB6491A1397E400DA8853 /* DataManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 77CAB6481A1397E400DA8853 /* DataManage.m */; };
 		77CAB64B1A1397FA00DA8853 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77CAB64A1A1397FA00DA8853 /* CoreData.framework */; };
-		77CAB64E1A1399F800DA8853 /* HouseEntrust.m in Sources */ = {isa = PBXBuildFile; fileRef = 77CAB64D1A1399F800DA8853 /* HouseEntrust.m */; };
 		77D3283C1A14974D0003ADF2 /* INNJHouseListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D3283B1A14974D0003ADF2 /* INNJHouseListViewController.m */; };
 		77D3283F1A14BC130003ADF2 /* INNJHouseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D3283E1A14BC130003ADF2 /* INNJHouseDetailViewController.m */; };
 		77D328481A14C2D90003ADF2 /* INNJHouseDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D328461A14C2D90003ADF2 /* INNJHouseDetailTableViewCell.m */; };
@@ -90,6 +95,7 @@
 		77D328501A14DB250003ADF2 /* INNJContractViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D3284F1A14DB250003ADF2 /* INNJContractViewController.m */; };
 		77D328581A15F0F10003ADF2 /* INNJAddDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D328571A15F0F10003ADF2 /* INNJAddDateViewController.m */; };
 		77D3285B1A15F0FF0003ADF2 /* INNJAddEntrustViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D3285A1A15F0FF0003ADF2 /* INNJAddEntrustViewController.m */; };
+		77D5607B1A28B4D700481EA9 /* point@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77D5607A1A28B4D700481EA9 /* point@2x.png */; };
 		94818F799B3D4AB59781091A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9212BA52E5EF47258EFFEE06 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -232,7 +238,24 @@
 		7732FE601A0CFF450024BF01 /* INNJConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INNJConstants.m; sourceTree = "<group>"; };
 		77342EE51A16F2E400E05DBE /* INNJPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INNJPoint.h; sourceTree = "<group>"; };
 		77342EE61A16F2E400E05DBE /* INNJPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INNJPoint.m; sourceTree = "<group>"; };
-		77342EE81A17157800E05DBE /* point@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "point@2x.png"; sourceTree = "<group>"; };
+		779E554D1A21FBDF00F6CB79 /* INNJSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INNJSearchViewController.h; sourceTree = "<group>"; };
+		779E554E1A21FBE000F6CB79 /* INNJSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INNJSearchViewController.m; sourceTree = "<group>"; };
+		779E55621A25DC2F00F6CB79 /* DataManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManage.h; sourceTree = "<group>"; };
+		779E55631A25DC2F00F6CB79 /* DataManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManage.m; sourceTree = "<group>"; };
+		779E556F1A25EC5100F6CB79 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		779E55741A25EF9000F6CB79 /* HouseDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseDate.h; sourceTree = "<group>"; };
+		779E55751A25EF9000F6CB79 /* HouseDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseDate.m; sourceTree = "<group>"; };
+		779E557A1A26D78200F6CB79 /* INNJVillageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INNJVillageViewController.h; sourceTree = "<group>"; };
+		779E557B1A26D78300F6CB79 /* INNJVillageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INNJVillageViewController.m; sourceTree = "<group>"; };
+		779E557D1A285F6300F6CB79 /* favourites-off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favourites-off@2x.png"; sourceTree = "<group>"; };
+		779E557E1A285F6300F6CB79 /* favourites-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favourites-on@2x.png"; sourceTree = "<group>"; };
+		779E55841A286C3C00F6CB79 /* INNJHouseDetailTableViewCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INNJHouseDetailTableViewCell2.h; sourceTree = "<group>"; };
+		779E55851A286C3C00F6CB79 /* INNJHouseDetailTableViewCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INNJHouseDetailTableViewCell2.m; sourceTree = "<group>"; };
+		779E55861A286C3C00F6CB79 /* INNJHouseDetailTableViewCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = INNJHouseDetailTableViewCell2.xib; sourceTree = "<group>"; };
+		779E55891A28810200F6CB79 /* Favourites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Favourites.h; sourceTree = "<group>"; };
+		779E558A1A28810200F6CB79 /* Favourites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Favourites.m; sourceTree = "<group>"; };
+		779E558F1A2894DD00F6CB79 /* HouseEntrust.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseEntrust.h; sourceTree = "<group>"; };
+		779E55901A2894DD00F6CB79 /* HouseEntrust.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseEntrust.m; sourceTree = "<group>"; };
 		77CAB6121A10D35800DA8853 /* INNJEntrustView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = INNJEntrustView.xib; sourceTree = "<group>"; };
 		77CAB6141A10D5E300DA8853 /* INNJEntrustView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INNJEntrustView.h; sourceTree = "<group>"; };
 		77CAB6151A10D5E300DA8853 /* INNJEntrustView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INNJEntrustView.m; sourceTree = "<group>"; };
@@ -247,9 +270,6 @@
 		77CAB6281A11F17C00DA8853 /* INNJHouseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INNJHouseTableViewCell.h; sourceTree = "<group>"; };
 		77CAB6291A11F17C00DA8853 /* INNJHouseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INNJHouseTableViewCell.m; sourceTree = "<group>"; };
 		77CAB62A1A11F17C00DA8853 /* INNJHouseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = INNJHouseTableViewCell.xib; sourceTree = "<group>"; };
-		77CAB62D1A11F39000DA8853 /* INNJVillageDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INNJVillageDetailTableViewCell.h; sourceTree = "<group>"; };
-		77CAB62E1A11F39000DA8853 /* INNJVillageDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INNJVillageDetailTableViewCell.m; sourceTree = "<group>"; };
-		77CAB62F1A11F39000DA8853 /* INNJVillageDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = INNJVillageDetailTableViewCell.xib; sourceTree = "<group>"; };
 		77CAB6321A12129600DA8853 /* INNJUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INNJUser.h; sourceTree = "<group>"; };
 		77CAB6331A12129600DA8853 /* INNJUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INNJUser.m; sourceTree = "<group>"; };
 		77CAB6351A1214BE00DA8853 /* INNJDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INNJDateViewController.h; sourceTree = "<group>"; };
@@ -257,14 +277,7 @@
 		77CAB6391A1215DB00DA8853 /* INNJLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INNJLoginViewController.h; sourceTree = "<group>"; };
 		77CAB63A1A1215DB00DA8853 /* INNJLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INNJLoginViewController.m; sourceTree = "<group>"; };
 		77CAB63C1A12196800DA8853 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
-		77CAB63F1A138FE500DA8853 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		77CAB6411A13917E00DA8853 /* HouseDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseDate.h; sourceTree = "<group>"; };
-		77CAB6421A13917E00DA8853 /* HouseDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseDate.m; sourceTree = "<group>"; };
-		77CAB6471A1397E400DA8853 /* DataManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManage.h; sourceTree = "<group>"; };
-		77CAB6481A1397E400DA8853 /* DataManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManage.m; sourceTree = "<group>"; };
 		77CAB64A1A1397FA00DA8853 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		77CAB64C1A1399F800DA8853 /* HouseEntrust.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseEntrust.h; sourceTree = "<group>"; };
-		77CAB64D1A1399F800DA8853 /* HouseEntrust.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseEntrust.m; sourceTree = "<group>"; };
 		77D3283A1A14974D0003ADF2 /* INNJHouseListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INNJHouseListViewController.h; sourceTree = "<group>"; };
 		77D3283B1A14974D0003ADF2 /* INNJHouseListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INNJHouseListViewController.m; sourceTree = "<group>"; };
 		77D3283D1A14BC130003ADF2 /* INNJHouseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INNJHouseDetailViewController.h; sourceTree = "<group>"; };
@@ -280,6 +293,7 @@
 		77D328571A15F0F10003ADF2 /* INNJAddDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INNJAddDateViewController.m; sourceTree = "<group>"; };
 		77D328591A15F0FF0003ADF2 /* INNJAddEntrustViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INNJAddEntrustViewController.h; sourceTree = "<group>"; };
 		77D3285A1A15F0FF0003ADF2 /* INNJAddEntrustViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INNJAddEntrustViewController.m; sourceTree = "<group>"; };
+		77D5607A1A28B4D700481EA9 /* point@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "point@2x.png"; sourceTree = "<group>"; };
 		9212BA52E5EF47258EFFEE06 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -425,6 +439,10 @@
 				77D3285A1A15F0FF0003ADF2 /* INNJAddEntrustViewController.m */,
 				771B82B51A18C59800C1F823 /* INNJTabController.h */,
 				771B82B61A18C59800C1F823 /* INNJTabController.m */,
+				779E554D1A21FBDF00F6CB79 /* INNJSearchViewController.h */,
+				779E554E1A21FBE000F6CB79 /* INNJSearchViewController.m */,
+				779E557A1A26D78200F6CB79 /* INNJVillageViewController.h */,
+				779E557B1A26D78300F6CB79 /* INNJVillageViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -459,6 +477,8 @@
 			isa = PBXGroup;
 			children = (
 				77D3284C1A14D7940003ADF2 /* forward-btn@2x.png */,
+				779E557D1A285F6300F6CB79 /* favourites-off@2x.png */,
+				779E557E1A285F6300F6CB79 /* favourites-on@2x.png */,
 				77CAB63C1A12196800DA8853 /* logo@2x.png */,
 				77CAB6171A10DD6200DA8853 /* input-bg-off@2x.png */,
 				77CAB6181A10DD6200DA8853 /* input-bg-on@2x.png */,
@@ -478,12 +498,12 @@
 				7732FDCB1A09EB900024BF01 /* map_mark@2x.png */,
 				7732FDCC1A09EB900024BF01 /* mine_tag_off@2x.png */,
 				7732FDCD1A09EB900024BF01 /* mine_tag_on@2x.png */,
+				77D5607A1A28B4D700481EA9 /* point@2x.png */,
 				7732FDCE1A09EB900024BF01 /* rent_tag_off@2x.png */,
 				7732FDCF1A09EB900024BF01 /* rent_tag_on@2x.png */,
 				7732FDD01A09EB900024BF01 /* search_button@2x.png */,
 				7732FDD11A09EB900024BF01 /* top_back@2x.png */,
 				77D3284A1A14C5540003ADF2 /* map_mark_tag@2x.png */,
-				77342EE81A17157800E05DBE /* point@2x.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -520,12 +540,12 @@
 				77CAB6281A11F17C00DA8853 /* INNJHouseTableViewCell.h */,
 				77CAB6291A11F17C00DA8853 /* INNJHouseTableViewCell.m */,
 				77CAB62A1A11F17C00DA8853 /* INNJHouseTableViewCell.xib */,
-				77CAB62D1A11F39000DA8853 /* INNJVillageDetailTableViewCell.h */,
-				77CAB62E1A11F39000DA8853 /* INNJVillageDetailTableViewCell.m */,
-				77CAB62F1A11F39000DA8853 /* INNJVillageDetailTableViewCell.xib */,
 				77D328451A14C2D90003ADF2 /* INNJHouseDetailTableViewCell.h */,
 				77D328461A14C2D90003ADF2 /* INNJHouseDetailTableViewCell.m */,
 				77D328471A14C2D90003ADF2 /* INNJHouseDetailTableViewCell.xib */,
+				779E55841A286C3C00F6CB79 /* INNJHouseDetailTableViewCell2.h */,
+				779E55851A286C3C00F6CB79 /* INNJHouseDetailTableViewCell2.m */,
+				779E55861A286C3C00F6CB79 /* INNJHouseDetailTableViewCell2.xib */,
 			);
 			name = "Cell+Nibs";
 			sourceTree = "<group>";
@@ -623,13 +643,15 @@
 		77CAB6381A12150300DA8853 /* Modal */ = {
 			isa = PBXGroup;
 			children = (
-				77CAB63E1A138FE500DA8853 /* Model.xcdatamodeld */,
-				77CAB6411A13917E00DA8853 /* HouseDate.h */,
-				77CAB6421A13917E00DA8853 /* HouseDate.m */,
-				77CAB6471A1397E400DA8853 /* DataManage.h */,
-				77CAB6481A1397E400DA8853 /* DataManage.m */,
-				77CAB64C1A1399F800DA8853 /* HouseEntrust.h */,
-				77CAB64D1A1399F800DA8853 /* HouseEntrust.m */,
+				779E55621A25DC2F00F6CB79 /* DataManage.h */,
+				779E55631A25DC2F00F6CB79 /* DataManage.m */,
+				779E556E1A25EC5100F6CB79 /* Model.xcdatamodeld */,
+				779E55741A25EF9000F6CB79 /* HouseDate.h */,
+				779E55751A25EF9000F6CB79 /* HouseDate.m */,
+				779E55891A28810200F6CB79 /* Favourites.h */,
+				779E558A1A28810200F6CB79 /* Favourites.m */,
+				779E558F1A2894DD00F6CB79 /* HouseEntrust.h */,
+				779E55901A2894DD00F6CB79 /* HouseEntrust.m */,
 			);
 			name = Modal;
 			sourceTree = "<group>";
@@ -717,18 +739,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				77CAB6131A10D35800DA8853 /* INNJEntrustView.xib in Resources */,
-				77CAB6311A11F39000DA8853 /* INNJVillageDetailTableViewCell.xib in Resources */,
 				77D3284D1A14D7940003ADF2 /* forward-btn@2x.png in Resources */,
 				77CAB62C1A11F17C00DA8853 /* INNJHouseTableViewCell.xib in Resources */,
+				77D5607B1A28B4D700481EA9 /* point@2x.png in Resources */,
 				7732FDD31A09EB900024BF01 /* delete_button@2x.png in Resources */,
 				7732FDD91A09EB900024BF01 /* mine_tag_off@2x.png in Resources */,
 				7732FDF41A0A59DD0024BF01 /* user-about@2x.png in Resources */,
 				7732FDDC1A09EB900024BF01 /* rent_tag_on@2x.png in Resources */,
 				77CAB63D1A12196800DA8853 /* logo@2x.png in Resources */,
+				779E55801A285F6300F6CB79 /* favourites-on@2x.png in Resources */,
 				7732FE0C1A0CC3E20024BF01 /* INNJMineTableViewCell.xib in Resources */,
 				7732FDD51A09EB900024BF01 /* entrust_tag_on@2x.png in Resources */,
 				7732FDF91A0A59DD0024BF01 /* user-rate@2x.png in Resources */,
 				77D328491A14C2D90003ADF2 /* INNJHouseDetailTableViewCell.xib in Resources */,
+				779E557F1A285F6300F6CB79 /* favourites-off@2x.png in Resources */,
 				7732FDDA1A09EB900024BF01 /* mine_tag_on@2x.png in Resources */,
 				7732FDDD1A09EB900024BF01 /* search_button@2x.png in Resources */,
 				77CAB6271A11F08900DA8853 /* INNJEntrustTableViewCell.xib in Resources */,
@@ -749,11 +773,11 @@
 				7732FDD41A09EB900024BF01 /* entrust_tag_off@2x.png in Resources */,
 				7732FDF51A0A59DD0024BF01 /* user-check-update@2x.png in Resources */,
 				77D3284B1A14C5540003ADF2 /* map_mark_tag@2x.png in Resources */,
-				77342EE91A17157800E05DBE /* point@2x.png in Resources */,
 				7732FDC01A09DE260024BF01 /* Podfile in Resources */,
 				77CAB6191A10DD6200DA8853 /* input-bg-off@2x.png in Resources */,
 				7732FD9E1A09DD1C0024BF01 /* Main.storyboard in Resources */,
 				7732FDD71A09EB900024BF01 /* map_mark_direction@2x.png in Resources */,
+				779E55881A286C3C00F6CB79 /* INNJHouseDetailTableViewCell2.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -805,17 +829,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77CAB64E1A1399F800DA8853 /* HouseEntrust.m in Sources */,
+				779E55911A2894DD00F6CB79 /* HouseEntrust.m in Sources */,
+				779E554F1A21FBE000F6CB79 /* INNJSearchViewController.m in Sources */,
 				7732FDE11A09EBE80024BF01 /* INNJInfoRequest.m in Sources */,
 				77CAB63B1A1215DB00DA8853 /* INNJLoginViewController.m in Sources */,
 				7732FD971A09DD1B0024BF01 /* main.m in Sources */,
 				77CAB6371A1214BE00DA8853 /* INNJDateViewController.m in Sources */,
 				77D3285B1A15F0FF0003ADF2 /* INNJAddEntrustViewController.m in Sources */,
-				77CAB6301A11F39000DA8853 /* INNJVillageDetailTableViewCell.m in Sources */,
 				7732FDEB1A0A51BC0024BF01 /* INNJUserViewController.m in Sources */,
 				77D3283C1A14974D0003ADF2 /* INNJHouseListViewController.m in Sources */,
+				779E55871A286C3C00F6CB79 /* INNJHouseDetailTableViewCell2.m in Sources */,
+				779E55641A25DC3000F6CB79 /* DataManage.m in Sources */,
 				77CAB6161A10D5E300DA8853 /* INNJEntrustView.m in Sources */,
 				77CAB6341A12129600DA8853 /* INNJUser.m in Sources */,
+				779E557C1A26D78300F6CB79 /* INNJVillageViewController.m in Sources */,
 				77CAB6261A11F08900DA8853 /* INNJEntrustTableViewCell.m in Sources */,
 				77D328481A14C2D90003ADF2 /* INNJHouseDetailTableViewCell.m in Sources */,
 				7732FDFF1A0CB1640024BF01 /* INNJEntrustViewController.m in Sources */,
@@ -826,15 +853,15 @@
 				7732FD9B1A09DD1B0024BF01 /* INNJAppDelegate.m in Sources */,
 				7732FDE51A0A51360024BF01 /* INNJRentHouseViewController.m in Sources */,
 				77D328581A15F0F10003ADF2 /* INNJAddDateViewController.m in Sources */,
+				779E558B1A28810200F6CB79 /* Favourites.m in Sources */,
 				7732FE0B1A0CC3E20024BF01 /* INNJMineTableViewCell.m in Sources */,
 				77CAB62B1A11F17C00DA8853 /* INNJHouseTableViewCell.m in Sources */,
 				77D328501A14DB250003ADF2 /* INNJContractViewController.m in Sources */,
-				77CAB6431A13917E00DA8853 /* HouseDate.m in Sources */,
 				7732FDA11A09DD1C0024BF01 /* INNJViewController.m in Sources */,
-				77CAB6401A138FE500DA8853 /* Model.xcdatamodeld in Sources */,
-				77CAB6491A1397E400DA8853 /* DataManage.m in Sources */,
 				7732FE101A0CDF800024BF01 /* UIView+Additions.m in Sources */,
 				77D3283F1A14BC130003ADF2 /* INNJHouseDetailViewController.m in Sources */,
+				779E55761A25EF9000F6CB79 /* HouseDate.m in Sources */,
+				779E55701A25EC5100F6CB79 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -842,6 +869,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				779E55491A1DE60A00F6CB79 /* INNJInfoRequest.m in Sources */,
 				7732FDB61A09DD1C0024BF01 /* innjiaiosTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1071,12 +1099,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		77CAB63E1A138FE500DA8853 /* Model.xcdatamodeld */ = {
+		779E556E1A25EC5100F6CB79 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				77CAB63F1A138FE500DA8853 /* Model.xcdatamodel */,
+				779E556F1A25EC5100F6CB79 /* Model.xcdatamodel */,
 			);
-			currentVersion = 77CAB63F1A138FE500DA8853 /* Model.xcdatamodel */;
+			currentVersion = 779E556F1A25EC5100F6CB79 /* Model.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

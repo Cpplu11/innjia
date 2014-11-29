@@ -32,7 +32,7 @@
 {
     if(self = [super init])
     {
-        _apis = @[@"Ainn/stepMobile",@"Ainn/checkMoblie",@"House/getHousebyAid",@"House/getHousebyDt",@"House/getHousebyVillage",@"House/getVillage",@"House/addPredict",@"House/getPredictbyId",@"House/getPredictbyTel",@"House/getPredictbyId",@"House/addEntrust",@"House/getEntrustbyId",@"House/getEntrustbyTel"];
+        _apis = @[@"Ainn/stepMobile",@"Ainn/checkMobile",@"House/getHousebyAid",@"House/getHousebyDt",@"House/getHousebyVillage",@"House/getVillage",@"House/addPredict",@"House/getPredictbyId",@"House/getPredictbyTel",@"House/getPredictbyId",@"House/addEntrust",@"House/getEntrustbyId",@"House/getEntrustbyTel",@"House/getHousebysearch"];
     }
       
     return self;
@@ -55,7 +55,6 @@
         {
             NSString *md5 = [self MD5:[NSString stringWithFormat:@"%@%@%@",params[TELEPHONEKEY],params[VERIFYKEY],APIKEY]];
             [params setObject:md5 forKey:CODEKEY];
-            
         }
             break;
         case GetHousebyAid:
@@ -80,8 +79,9 @@
             break;
         case AddPredict:
         {
-            NSString *md5 = [self MD5:[NSString stringWithFormat:@"%@%@%@%@%@",params[HOUSEID],params[USERNAME],params[USERSEX],params[USERDATE],APIKEY]];
+            NSString *md5 = [self MD5:[NSString stringWithFormat:@"%@%@%@%@%@",params[HOUSEAID],params[USERNAME],params[USERSEX],params[USERDATE],APIKEY]];
             [params setObject:md5 forKey:CODEKEY];
+         
         }
             break;
             
@@ -96,6 +96,7 @@
         case GetPredictbyId:
         {
             NSString *md5 = [self MD5:[NSString stringWithFormat:@"%@%@",params[ID],APIKEY]];
+           
             [params setObject:md5 forKey:CODEKEY];
         }
             break;
@@ -106,7 +107,12 @@
             [params setObject:md5 forKey:CODEKEY];
         }
             break;
-        
+        case GetHouseBySearch:
+        {
+            NSString *md5 = [self MD5:[NSString stringWithFormat:@"%@%@",params[SEARCHKEY],APIKEY]];
+            [params setObject:md5 forKey:CODEKEY];
+        }
+            break;
         default:
             break;
     }

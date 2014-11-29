@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #define INNJUSERTELEPHONEKEY @"tele"
+#define INNJUSERTOKENKEY @"token"
 @interface INNJUser : NSObject
 @property (strong,nonatomic) NSString* telephone;
+@property (strong,nonatomic) NSString* token;
+@property (strong,nonatomic) NSString* currentid;
 +(INNJUser*) user;
 -(BOOL) isLogin;
 -(void) logout;
--(void) login:(NSString*)telephone;
+-(void) login:(NSString*)telephone andToken:(NSString *) token;
 @end

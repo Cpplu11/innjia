@@ -9,5 +9,6 @@
 #import "INNJViewController.h"
 
 @interface INNJAddEntrustViewController : INNJViewController
-
+@property (nonatomic,assign) bool showflag;
+@property (nonatomic,strong) NSString * entrustid;
 @end

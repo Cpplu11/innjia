@@ -26,6 +26,7 @@
     if(self = [super init])
     {
         _telephone = [[NSUserDefaults standardUserDefaults] objectForKey:INNJUSERTELEPHONEKEY];
+        _token = [[NSUserDefaults standardUserDefaults] objectForKey:INNJUSERTOKENKEY];
     }
     
     return self;
@@ -40,12 +41,21 @@
 -(void) logout
 {
     _telephone = nil;
+    _token = nil;
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:INNJUSERTELEPHONEKEY];
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:INNJUSERTOKENKEY];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:LOGOUTNITIFICATION object:nil];
 }
--(void) login:(NSString*)telephone
+-(void) login:(NSString*)telephone andToken:(NSString *)token
 {
     _telephone = telephone;
+    _token = token;
     [[NSUserDefaults standardUserDefaults] setObject:_telephone forKey:INNJUSERTELEPHONEKEY];
+    [[NSUserDefaults standardUserDefaults] setObject:_token forKey:INNJUSERTOKENKEY];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     
+    [[NSNotificationCenter defaultCenter] postNotificationName:LOGINNOTIFICATION object:nil];
 }
 @end

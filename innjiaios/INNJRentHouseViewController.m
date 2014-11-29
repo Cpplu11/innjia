@@ -9,6 +9,8 @@
 #import "INNJRentHouseViewController.h"
 #import "INNJHouseListViewController.h"
 #import "INNJPoint.h"
+#import "INNJSearchViewController.h"
+
 
 #define MINDISTANCE 0.002
 #define SHANGHAILOCATION CLLocationCoordinate2DMake(31.24551,121.517581)
@@ -141,16 +143,8 @@
 -(void) searchAction:(id) sender
 {
     [self hideHouse];
-//    if(_searchshow)
-//    {
-//        [self hideSearch];
-//    }else
-//    {
-//        [self showSearch];
-//    }
-    
-    [self showLoading];
-    [self infoRequest:CLLocationCoordinate2DMake(_mapview.centerCoordinate.latitude+_mapview.region.span.latitudeDelta/2 ,_mapview.centerCoordinate.longitude-_mapview.region.span.longitudeDelta/2) andEnd:CLLocationCoordinate2DMake(_mapview.centerCoordinate.latitude-_mapview.region.span.latitudeDelta/2,_mapview.centerCoordinate.longitude+_mapview.region.span.longitudeDelta/2)];
+    INNJSearchViewController *controller = [[INNJSearchViewController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

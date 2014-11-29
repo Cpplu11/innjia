@@ -20,10 +20,10 @@
 #define PADDINGDEFAULT(view) PADDING(TEXTPADDING,TEXTPADDING,view)
 
 #define LOGINNOTIFICATION @"login"
+#define LOGOUTNITIFICATION @"logout"
 
-
-#define HTTPWRAPPER(url) [NSString stringWithFormat:@"http://%@",url]
-
+#define HTTPWRAPPER(url) ([url rangeOfString:@"#"].location < [url length]? [url substringWithRange:NSMakeRange(0, [url rangeOfString:@"#"].location)]:nil)
+#define PROCESSIMG(url) [url substringWithRange:NSMakeRange(0, [url rangeOfString:@"#"].location)]
 
 #define IOSVERSION [[UIDevice currentDevice].systemVersion integerValue]
 #define IOS8 8

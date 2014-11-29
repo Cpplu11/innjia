@@ -8,7 +8,6 @@
 
 #import "INNJAppDelegate.h"
 #import "DataManage.h"
-#import "HouseEntrust.h"
 @interface INNJAppDelegate () <BMKGeneralDelegate>
 @property (nonatomic,strong) BMKMapManager *manager;
 @end

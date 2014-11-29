@@ -11,5 +11,6 @@
 @interface INNJMineTableViewCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UIImageView *image;
 @property (strong, nonatomic) IBOutlet UILabel *title;
+@property (strong, nonatomic) IBOutlet UILabel *subtitle;
 -(void) addData:(NSString*) imageName andTitle:(NSString*) title;
 @end

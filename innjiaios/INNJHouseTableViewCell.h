@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HouseDate.h"
 #define IMAGEKEY @"img"
 #define NAMEKEY @"village"
 #define PRICEKEY @"rent"
@@ -22,4 +23,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *introlabel;
 @property (strong, nonatomic) IBOutlet UILabel *roomlabel;
 -(void) bindData:(NSDictionary*) data;
+-(void) bindOrignalData:(NSDictionary *)data;
+-(void) requestData:(NSInteger) aid;
+-(void) bindHouseDate:(HouseDate*) housedate;
 @end

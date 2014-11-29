@@ -10,6 +10,7 @@
 
 @interface INNJContractViewController : INNJViewController
 @property (strong, nonatomic) IBOutlet UIButton *submitBtn;
+@property (strong, nonatomic) IBOutlet UITextView *contracttext;
 - (IBAction)submitAction:(id)sender;
 
 @end

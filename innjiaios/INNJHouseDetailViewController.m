@@ -9,10 +9,15 @@
 #import "INNJHouseDetailViewController.h"
 #import "INNJInfoRequest.h"
 #import "INNJHouseDetailTableViewCell.h"
+#import "INNJHouseDetailTableViewCell2.h"
 #import "INNJContractViewController.h"
 #import "INNJHouseListViewController.h"
-
-
+#import "INNJUser.h"
+#import <CoreData/CoreData.h>
+#import "DataManage.h"
+#import "Favourites.h"
+#import "HouseDate.h"
+#import "INNJVillageViewController.h"
 @interface INNJHouseDetailViewController () <INNJInfoRequestDelegate,UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong) UITableView *tableview;
 @property (nonatomic,strong) NSDictionary* data;
@@ -44,6 +49,8 @@
     _tableview.dataSource = self;
     _tableview.separatorStyle = UITableViewCellSeparatorStyleNone ;
     _tableview.separatorColor = [UIColor grayColor];
+    _tableview.bounces = NO;
+    _tableview.showsVerticalScrollIndicator = NO;
     [self.view addSubview:_tableview];
     
     self.navigationItem.title = @"详情";
@@ -95,9 +102,10 @@
             break;
         case 1:
         {
-            cell = [INNJHouseDetailTableViewCell getView:1];
+            cell = [INNJHouseDetailTableViewCell2 getView];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             [cell bindData:_data];
+            
       
         }
             break;
@@ -153,7 +161,9 @@
         
         if(3 == indexPath.row)
         {
-            [[INNJInfoRequest request] makeRequest:GetVillage andParams:@{HOUSEVILLAGE:_data[@"village"]} andDelegate:self];
+            INNJVillageViewController *controller = [[INNJVillageViewController alloc] init];
+            controller.village = _data[@"village"];
+            [self.navigationController pushViewController:controller animated:YES];
         }else
         {
             INNJHouseListViewController* controller = [[INNJHouseListViewController alloc] initWithType:VillageHouseList];
@@ -170,7 +180,7 @@
     [self dismissLoading];
     
     
-    NSLog(@"%@",data);
+    //NSLog(@"%@",data);
     
     if(GetHousebyAid == type)
     {
@@ -181,8 +191,20 @@
 
 -(void) submitAction:(id) sender
 {
-    INNJContractViewController *controller =  [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"contractcontroller"];
-    [self.navigationController pushViewController:controller animated:YES];
+    [INNJUser user].currentid = _data[HOUSEID];
+    
+    //存储一条记录
+    HouseDate *housedate = [NSEntityDescription insertNewObjectForEntityForName:@"HouseDate" inManagedObjectContext:[DataManage instance].managedObjectContext];
+    housedate.aid = [NSString stringWithFormat:@"%@",_data[HOUSEID]];
+    housedate.img = _data[HOUSEIMAGE];
+    housedate.rent = _data[RENTCOST];
+    housedate.village = _data[HOUSEVILLAGE];
+    housedate.date = [NSDate date];
+    housedate.shi = _data[ROOMS];
+    
+    [[DataManage instance] saveContext];
+    
+    [self.tabBarController setSelectedIndex:1];
 }
 
 -(void) errorDone:(NSError *)error withType:(RequestType)type

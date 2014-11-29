@@ -2,7 +2,7 @@
 //  HouseEntrust.h
 //  innjiaios
 //
-//  Created by wl on 14-11-12.
+//  Created by wl on 14-11-28.
 //  Copyright (c) 2014年 wl. All rights reserved.
 //
 
@@ -12,9 +12,9 @@
 
 @interface HouseEntrust : NSManagedObject
 
-@property (nonatomic, retain) NSString * id;
-@property (nonatomic, retain) NSString * position;
+@property (nonatomic, retain) NSString * address;
 @property (nonatomic, retain) NSString * shi;
-@property (nonatomic, retain) NSString * date;
+@property (nonatomic, retain) NSDate * date;
+@property (nonatomic, retain) NSString * enid;
 
 @end

@@ -18,11 +18,6 @@
 
 @end
 
-@interface INNJHouseDetailTableViewCell2 :INNJHouseDetailTableViewCell
-@property (strong, nonatomic) IBOutlet UILabel *villagetext;
-@property (strong, nonatomic) IBOutlet UILabel *addresstext;
-@property (strong, nonatomic) IBOutlet UILabel *infotext;
-@end
 
 @interface INNJHouseDetailTableViewCell3 : INNJHouseDetailTableViewCell
 @property (strong, nonatomic) IBOutlet UILabel *titletext;

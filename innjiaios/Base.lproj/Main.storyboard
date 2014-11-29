@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="G5f-M0-kaJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="G5f-M0-kaJ">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -23,7 +23,7 @@
             </objects>
             <point key="canvasLocation" x="-447" y="-778"/>
         </scene>
-        <!--租房-->
+        <!--Rent House View Controller - 租房-->
         <scene sceneID="qQy-dI-FFr">
             <objects>
                 <viewController storyboardIdentifier="id_rent" title="租房" id="GY8-0k-9co" customClass="INNJRentHouseViewController" sceneMemberID="viewController">
@@ -57,7 +57,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dfM-8t-M0l">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfM-8t-M0l">
                                 <rect key="frame" x="10" y="81" width="300" height="370"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
@@ -85,6 +85,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="contracttext" destination="dfM-8t-M0l" id="mgw-Jw-AVJ"/>
                         <outlet property="submitBtn" destination="3qe-Nl-VH0" id="iyn-tP-BBr"/>
                     </connections>
                 </viewController>
@@ -170,7 +171,7 @@
             </objects>
             <point key="canvasLocation" x="-447" y="1255"/>
         </scene>
-        <!--委托-->
+        <!--Entrust View Controller - 委托-->
         <scene sceneID="bTB-rt-h2U">
             <objects>
                 <viewController storyboardIdentifier="id_entrust" title="委托" id="8WM-g1-TmO" customClass="INNJEntrustViewController" sceneMemberID="viewController">
@@ -195,27 +196,27 @@
         <!--Login View Controller-->
         <scene sceneID="3Rw-35-XC6">
             <objects>
-                <viewController id="Hi5-Ah-Uiv" customClass="INNJLoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" id="Hi5-Ah-Uiv" customClass="INNJLoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y2G-1n-yUZ"/>
                         <viewControllerLayoutGuide type="bottom" id="Ql1-6I-rfw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Qtu-b1-dfq">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="手机号码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ncb-sH-Q1b">
-                                <rect key="frame" x="20" y="112" width="280" height="40"/>
+                                <rect key="frame" x="20" y="123" width="280" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="验证码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AQn-gV-sqi">
-                                <rect key="frame" x="20" y="169" width="161" height="40"/>
+                                <rect key="frame" x="20" y="186" width="161" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="done"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2s-ec-S5g">
-                                <rect key="frame" x="194" y="169" width="106" height="40"/>
+                                <rect key="frame" x="194" y="186" width="106" height="40"/>
                                 <state key="normal" title="获取验证码">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -224,7 +225,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1m-yJ-aKW">
-                                <rect key="frame" x="20" y="225" width="280" height="40"/>
+                                <rect key="frame" x="20" y="248" width="280" height="40"/>
                                 <state key="normal" title="同意并登陆">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -234,7 +235,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="您的手机号码即用户名，我们会严格保密哒！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1NB-6S-DnA">
-                                <rect key="frame" x="20" y="85" width="280" height="21"/>
+                                <rect key="frame" x="20" y="93" width="280" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -254,7 +255,7 @@
             </objects>
             <point key="canvasLocation" x="434" y="751"/>
         </scene>
-        <!--约看-->
+        <!--Date View Controller - 约看-->
         <scene sceneID="MeF-Yn-aNV">
             <objects>
                 <viewController storyboardIdentifier="id_predict" title="约看" id="S4Z-Z6-d7E" customClass="INNJDateViewController" sceneMemberID="viewController">
@@ -276,7 +277,7 @@
             </objects>
             <point key="canvasLocation" x="-58" y="-105"/>
         </scene>
-        <!--我的-->
+        <!--User View Controller - 我的-->
         <scene sceneID="W9R-Ca-fN9">
             <objects>
                 <viewController storyboardIdentifier="id_my" title="我的" id="gEb-iY-i83" customClass="INNJUserViewController" sceneMemberID="viewController">
@@ -293,9 +294,6 @@
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="ejg-tc-3bm"/>
-                    <connections>
-                        <segue destination="Hi5-Ah-Uiv" kind="push" identifier="loginsegue" id="ZT1-73-dWi"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="obP-aA-edT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

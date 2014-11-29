@@ -9,6 +9,10 @@
 #import "INNJAddDateViewController.h"
 #import "INNJDateView.h"
 #import "INNJInfoRequest.h"
+#import "INNJUser.h"
+#import "DataManage.h"
+#import "HouseDate.h"
+#import <CoreData/CoreData.h>
 
 #define DATEDONETAG 1231
 @interface INNJAddDateViewController ()<INNJInfoRequestDelegate>
@@ -149,19 +153,48 @@
     }else
     {
         NSString *datetimestr = [NSString stringWithFormat:@"%@ %@",_datestr,_timestr];
-        [[INNJInfoRequest request] makeRequest:AddPredict andParams:@{USERNAME:_dateview.nametext.text,USERSEX:@"男",USERDATE:datetimestr,HOUSEID:@""} andDelegate:self];
+        [[INNJInfoRequest request] makeRequest:AddPredict andParams:@{USERNAME:_dateview.nametext.text,USERSEX:_dateview.sex,USERDATE:datetimestr,HOUSEAID:[INNJUser user].currentid,TOKENKEY:[INNJUser user].token} andDelegate:self];
     }
 }
 
 
 -(void) infoDone:(NSDictionary *)data withType:(RequestType)type
 {
-    
+    if(AddPredict == type && AddPredictSuccessStatus == [data[STATUSKEY] integerValue])
+    {
+        [self showText:@"预约成功"];
+        [self removeDate];
+        [self.navigationController popToRootViewControllerAnimated:YES];
+        
+    }else if(AddPredict == type)
+    {
+        [self showText:@"预约失败"];
+    }
 }
 
+-(void) removeDate
+{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"HouseDate" inManagedObjectContext:[DataManage instance].managedObjectContext];
+    [fetchRequest setEntity:entity];
+    // Specify criteria for filtering which objects to fetch
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"aid=", [INNJUser user].currentid];
+    [fetchRequest setPredicate:predicate];
+    // Specify how the fetched objects should be sorted
+    
+    NSError *error = nil;
+    NSArray *fetchedObjects = [[DataManage instance].managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    if (fetchedObjects != nil) {
+        for(HouseDate* date in fetchedObjects)
+        {
+            [[DataManage instance].managedObjectContext deleteObject:date];
+        }
+        [[DataManage instance] saveContext];
+    }
+}
 -(void) errorDone:(NSError *)error withType:(RequestType)type
 {
-    
+    [self showText:@"错误"];
 }
 
 

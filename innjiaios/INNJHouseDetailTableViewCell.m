@@ -38,22 +38,6 @@
 @end
 
 
-@implementation INNJHouseDetailTableViewCell2
-
--(void) awakeFromNib
-{
-
-}
--(void) bindData:(NSDictionary *)data
-{
-    _villagetext.text = [NSString stringWithFormat:@"%@   %@号楼   %@",data[@"village"],data[@"buildingno"],data[@"lease"]];
-    _addresstext.text = [NSString stringWithFormat:@"%@ %@",data[@"city"],data[@"district"]];
-    _infotext.text = [NSString stringWithFormat:@"%@ %@ %@",data[@"business"],data[@"floor "],data[@"paytype"]];
-  
-}
-
-
-@end
 
 
 @implementation INNJHouseDetailTableViewCell3

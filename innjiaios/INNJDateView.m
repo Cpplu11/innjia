@@ -14,6 +14,7 @@
 {
     UIGestureRecognizer * _gesture;
     UIGestureRecognizer * _resigngesture;
+    NSArray * _sexchoices;
 }
 -(void) awakeFromNib
 {
@@ -31,16 +32,16 @@
     _resigngesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(resignAction:)];
     [self addGestureRecognizer:_resigngesture];
     
-    NSArray * sexchoices = @[@"男",@"女"];
-    _sex = @"男";
+    _sexchoices = @[@"女士",@"先生"];
+    _sex = _sexchoices[0];
     CGFloat space = 10;
-    CGFloat width = (CGRectGetWidth(_sexarea.bounds) -([sexchoices count]-1)*space)/[sexchoices count];
+    CGFloat width = (CGRectGetWidth(_sexarea.bounds) -([_sexchoices count]-1)*space)/[_sexchoices count];
     CGFloat height = CGRectGetHeight(_sexarea.bounds);
-    for(int roomi = 0;roomi<[sexchoices count];roomi++)
+    for(int roomi = 0;roomi<[_sexchoices count];roomi++)
     {
         UIButton *btn= [[UIButton alloc] initWithFrame:CGRectMake(roomi*(width+space), 0, width, height)];
         btn.titleLabel.font = [UIFont systemFontOfSize:14];
-        [btn setTitle:sexchoices[roomi] forState:UIControlStateNormal];
+        [btn setTitle:_sexchoices[roomi] forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
         [btn setBackgroundImage:SCBGIMAGEOFF forState:UIControlStateNormal];
@@ -65,10 +66,7 @@
     }
     
     [sender setSelected:YES];
-    if(((UIView*)sender).tag ==1000)
-        self.sex = @"男";
-    else
-        self.sex = @"女";
+    self.sex = _sexchoices[((UIView*)sender).tag - 1000];
     
     
 }

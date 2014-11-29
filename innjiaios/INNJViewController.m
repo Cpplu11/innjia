@@ -7,7 +7,6 @@
 //
 
 #import "INNJViewController.h"
-
 #import "INNJLoginViewController.h"
 @interface INNJViewController ()
 
@@ -31,7 +30,7 @@
     [_hudtext hide:NO];
     
     self.editView = [self getDoneView:DONEBTNTAG];
-    
+    self.loginView = [self getLoginView];
     //keyboard
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
@@ -81,21 +80,35 @@
     
    
 }
--(UIView*) loginView
+-(UIView*) getEmptyView:(CGRect) rect withText:(NSString*) text
 {
-    static UIView *loginview = nil;
-    if(loginview==nil)
-    {
-        loginview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 100)];
-        loginview.backgroundColor = [UIColor whiteColor];
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(40, 40, self.view.width-80, 40)];
-        [button setBackgroundImage:SCBGIMAGEON forState:UIControlStateNormal];
-        [button setTitle:@"登录" forState:UIControlStateNormal];
-        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [button addTarget:self action:@selector(loginAction:) forControlEvents:UIControlEventTouchUpInside];
-        [loginview addSubview:button];
-    }
+    UIView *view = [[UIView alloc] initWithFrame:rect];
+    view.backgroundColor = [UIColor whiteColor];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(40,(view.height-20)/2 , view.width - 80, 20)];
+    label.text = text;
+    label.textColor = [UIColor colorWithWhite:0.7 alpha:1.0];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:16];
+    [view addSubview:label];
+    return view;
+}
+-(UIView*) getLoginView
+{
+    UIView* loginview = [[UIView alloc] initWithFrame:CGRectMake(0, self.topoffset, self.view.width, 160)];
+    loginview.backgroundColor = [UIColor whiteColor];
     
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(40, 38, self.view.width-80, 14)];
+    label.font = [UIFont systemFontOfSize:12];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.text = @"快速登录,使用盈家的全部服务";
+    label.textColor = [UIColor lightGrayColor];
+    [loginview addSubview:label];
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(40, 60, self.view.width-80, 40)];
+    [button setBackgroundImage:SCBGIMAGEON forState:UIControlStateNormal];
+    [button setTitle:@"登录" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(loginAction:) forControlEvents:UIControlEventTouchUpInside];
+    [loginview addSubview:button];
     return loginview;
 }
 
@@ -125,7 +138,9 @@
 {
     if(self.navigationController)
     {
-        [self performSegueWithIdentifier:@"loginsegue" sender:nil];
+        UIStoryboard *board = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        INNJLoginViewController *controller = [board instantiateViewControllerWithIdentifier:@"login"];
+        [self.navigationController pushViewController:controller animated:YES];
     }
 }
 
@@ -186,7 +201,7 @@
     {
         offset += self.navigationController.navigationBar.height;
     }
-    return 0;
+    return offset;
 }
 
 -(CGFloat) bottomoffset

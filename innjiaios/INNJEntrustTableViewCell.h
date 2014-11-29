@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#define DATEKEY @"date"
-#define ADDRESSKEY @"address"
-#define ROOMKEY @"room"
+#define DATEKEY @"checkintime"
+#define ADDRESSKEY @"village"
+#define CITYKEY @"city"
+#define ROOMKEY @"shi"
 #define CELLKEY @"entrust"
 @interface INNJEntrustTableViewCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UILabel *datelabel;

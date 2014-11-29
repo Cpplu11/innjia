@@ -18,10 +18,11 @@
 @property (nonatomic,getter = topoffset) CGFloat topoffset;
 @property (nonatomic,getter = bottomoffset) CGFloat bottomoffset;
 @property (nonatomic,strong) UIView *editView;
--(UIView*) loginView;
+@property (nonatomic,strong) UIView *loginView;
 -(void) showLoading;
 -(void) dismissLoading;
 -(void) showText:(NSString*) text;
 -(UIView*) getDoneView:(NSInteger) tag;
+-(UIView*) getEmptyView:(CGRect) rect withText:(NSString*) text;
 
 @end

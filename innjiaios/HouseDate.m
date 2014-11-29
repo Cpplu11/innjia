@@ -2,7 +2,7 @@
 //  HouseDate.m
 //  innjiaios
 //
-//  Created by wl on 14-11-12.
+//  Created by wl on 14-11-26.
 //  Copyright (c) 2014年 wl. All rights reserved.
 //
 
@@ -11,10 +11,12 @@
 
 @implementation HouseDate
 
-@dynamic id;
-@dynamic village;
-@dynamic image;
-@dynamic shi;
+@dynamic aid;
+@dynamic img;
 @dynamic rent;
+@dynamic shi;
+@dynamic village;
+@dynamic date;
+@dynamic status;
 
 @end

@@ -16,5 +16,5 @@
 @property (strong, nonatomic) IBOutlet UIButton *contractbtn;
 @property (strong, nonatomic) IBOutlet UIButton *submitbtn;
 @property (strong, nonatomic) IBOutlet UIView *sexarea;
-@property (strong,nonatomic) NSString *sex;
+@property (assign,nonatomic) NSString *sex;
 @end

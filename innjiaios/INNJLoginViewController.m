@@ -9,7 +9,7 @@
 #import "INNJLoginViewController.h"
 #import "INNJUser.h"
 @interface INNJLoginViewController () <UITextFieldDelegate,INNJInfoRequestDelegate>
-
+@property (nonatomic,strong) NSString * token;
 @end
 
 @implementation INNJLoginViewController
@@ -35,6 +35,9 @@
     [_codebtn setBackgroundImage:SCBGIMAGEON forState:UIControlStateNormal];
     [_loginbtn setBackgroundImage:SCBGIMAGEON forState:UIControlStateNormal];
     [(UIButton*)[[self editView] viewWithTag:DONEBTNTAG] addTarget:self action:@selector(doneAction:) forControlEvents:UIControlEventTouchUpInside];
+    
+    if(self.navigationController)
+        self.navigationItem.title = @"登录";
 }
 
 -(void) doneAction:(id)sender
@@ -55,28 +58,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 -(void) infoDone:(NSDictionary *)data withType:(RequestType)type
 {
     [self dismissLoading];
-    NSLog(@"%@",data);
+    //NSLog(@"%@",data);
     
-    //测试
-//    [[INNJUser user] login:_telephonetext.text];
-//    
-//    [[NSNotificationCenter defaultCenter] postNotificationName:LOGINNOTIFICATION object:nil];
-//    [self.navigationController popViewControllerAnimated:YES];
-//    return;
+ 
     
     if(CheckMobile == type)
     {
@@ -84,9 +72,8 @@
         if(VerifySuccessStatus == [[data objectForKey:STATUSKEY] integerValue])
         {
             
-            [[INNJUser user] login:_telephonetext.text];
-            
-            [[NSNotificationCenter defaultCenter] postNotificationName:LOGINNOTIFICATION object:nil];
+            [[INNJUser user] login:_telephonetext.text andToken:_token];
+           
             [self.navigationController popViewControllerAnimated:YES];
         }else
         {
@@ -97,6 +84,7 @@
         if(StepSuccessStatus == [[data objectForKey:STATUSKEY] integerValue])
         {
             [self showText:@"验证码发送成功"];
+            _token = data[TOKENKEY];
         }else
         {
             [self showText:@"验证码发送出错"];
@@ -127,11 +115,11 @@
 }
 
 - (IBAction)loginAction:(id)sender {
-    if(_telephonetext.text!=nil && _telephonetext.text.length>0&& _codetext.text!=nil && _codetext.text.length>0)
+    if(_telephonetext.text!=nil && _telephonetext.text.length>0)
     {
         self.hud.labelText = @"正在登录";
         [self showLoading];
-        [[INNJInfoRequest request] makeRequest:StepMobile andParams:@{TELEPHONEKEY:_telephonetext.text,VERIFYKEY:_codetext.text} andDelegate:self];
+        [[INNJInfoRequest request] makeRequest:CheckMobile andParams:@{TELEPHONEKEY:_telephonetext.text,VERIFYKEY:_codetext.text,TOKENKEY:_token} andDelegate:self];
     }else
     {
        [self showText:@"手机和验证码不许为空"];

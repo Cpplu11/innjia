@@ -15,8 +15,11 @@
 #define TELEPHONEKEY @"tel"
 #define CODEKEY @"code"
 #define VERIFYKEY @"verify"
+#define TOKENKEY @"token"
 //GetHouseByAid
 #define HOUSEID @"id"
+#define HOUSEAID @"aid"
+#define HOUSEIMAGE @"img"
 //GetHouseByDt
 #define HOUSESTARTDT @"startdt"
 #define HOUSEENDDT @"enddt"
@@ -32,10 +35,12 @@
 #define USERCITY @"city"
 #define RENTCOST @"rent"
 #define ROOMS @"shi"
-#define CHECKTIME @"checktime"
+#define CHECKTIME @"checkintime"
 #define MEMO @"memo"
 
+//search
 
+#define SEARCHKEY @"search"
 #define ID @"id"
 
 #define STATUSKEY @"status"
@@ -55,7 +60,8 @@ typedef NS_ENUM(NSInteger, RequestType)
     GetUnknown,
     AddEntrust,
     GetEntrustbyId,
-    GetEntrustbyTel
+    GetEntrustbyTel,
+    GetHouseBySearch
 };
 
 typedef NS_ENUM(NSInteger, InfoStatus)
@@ -77,7 +83,7 @@ typedef NS_ENUM(NSInteger, InfoStatus)
     GetVillageSuccessStatus = 120,
     GetVillageNotExistStatus = 121,
     //AddPredict
-    AddPredictSuccessStatus = 130,
+    AddPredictSuccessStatus = 111,
     AddPredictErrorStatus = 131,
     
     //GetPredictById
@@ -85,15 +91,15 @@ typedef NS_ENUM(NSInteger, InfoStatus)
     GetPredictByIdNotExistSuccess = 141,
     
     //GetPredictByTel
-    GetPredictByTelSuccessStatus = 140,
+    GetPredictByTelSuccessStatus = 116,
     
     //AddEntrust
-    AddEntrussSuccessStatus = 160,
-    AddEntrussErrorStatus = 161,
+    AddEntrussSuccessStatus = 115,
+    AddEntrussErrorStatus = 116,
     
     //GetEntrustById
-    GetEntrustByIdSuccessStatus = 170,
-    GetEntrustByIdNotExistStatus = 171,
+    GetEntrustByIdSuccessStatus = 123,
+    GetEntrustByIdNotExistStatus = 124,
     
     //GetEntrustByTel
     GetEntrustByTelSuccessStatus = 170,
