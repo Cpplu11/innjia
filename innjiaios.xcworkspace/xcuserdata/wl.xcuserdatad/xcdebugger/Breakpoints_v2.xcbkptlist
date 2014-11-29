@@ -342,7 +342,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "innjiaios/INNJAddDateViewController.m"
@@ -473,7 +473,7 @@
                   symbolName = "-[INNJAddEntrustViewController textFieldShouldReturn:]"
                   moduleName = "innjiaios"
                   urlString = "file:///Users/wl/Desktop/InnjiaProject/innjiaios/innjiaios/INNJAddEntrustViewController.m"
-                  timestampString = "438939811.92533"
+                  timestampString = "438941567.191151"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "215"
@@ -487,7 +487,7 @@
                   symbolName = "__54-[INNJAddEntrustViewController textFieldShouldReturn:]_block_invoke"
                   moduleName = "innjiaios"
                   urlString = "file:///Users/wl/Desktop/InnjiaProject/innjiaios/innjiaios/INNJAddEntrustViewController.m"
-                  timestampString = "438939811.925535"
+                  timestampString = "438941567.191332"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "215"
@@ -1008,7 +1008,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "innjiaios/INNJAddDateViewController.m"
@@ -1082,6 +1082,22 @@
             startingLineNumber = "207"
             endingLineNumber = "207"
             landmarkName = "-submitAction:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "innjiaios/INNJAddDateViewController.m"
+            timestampString = "438941504.623118"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
+            landmarkName = "-removeDate"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

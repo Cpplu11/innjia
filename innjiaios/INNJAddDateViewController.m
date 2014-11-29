@@ -178,7 +178,7 @@
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"HouseDate" inManagedObjectContext:[DataManage instance].managedObjectContext];
     [fetchRequest setEntity:entity];
     // Specify criteria for filtering which objects to fetch
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"aid=", [INNJUser user].currentid];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"aid=%@",[INNJUser user].currentid];
     [fetchRequest setPredicate:predicate];
     // Specify how the fetched objects should be sorted
     
